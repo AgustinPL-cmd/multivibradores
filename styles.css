@@ -1,3 +1,14 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --morado: #9F82F3; 
+    --azul: #0648BA;
+    --verde: #26D3A6;
+    --azul-claro: #C3EFFC;
+    --naranja-claro: #F8B6A8;
+    --rosa-claro: #F7C2D6;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -48,11 +59,12 @@ main{
     border-radius: 10px;
     margin: 5px;
 
-    font-family: "REM", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: light;
     font-style: normal;
-    font-size: 12px;
+    font-style: normal;
+    font-size: 15px;
 
 }
 
@@ -64,12 +76,12 @@ main{
 #info-nombre{
     grid-column: 2;
     grid-row: 1;
-    text-align: right;
+    text-align: left;
 }
 
 #info-grupo{
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
     text-align: right;
 
 }
@@ -130,40 +142,88 @@ main{
     width: 100%;
 }
 
-footer{
+.footer {
     width: 100%;
-    height: auto;
-    background-color: #1B1A55;
+    background-color: var(--negro);
+}
+
+.footer .grupo-1{
+    width: 44.5%;
+    max-width: 120rem;
+    margin: auto;
+    display: grid;
+    grid-gap: 3rem;
+    padding: 1.5rem 0rem;
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 12rem;
+}
+
+.footer .grupo-1 .box h2{
+    color: var(--blanco);
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+}
+
+.footer .grupo-1 .box h3{
+    color: var(--blanco);
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.footer .grupo-1 .box h4{
+    color: var(--blanco);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.footer .grupo-1 .box p{
+    color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.footer .grupo-1  .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    color: var(--blanco);
+    margin-right: 2.2rem;
+    background-color: var(--morado);
+    text-align: center; 
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1  .red-social a:hover {
+    color: var(--azul);
+}
+
+.footer .grupo-2{
+    background-color: var(--azul);
+    padding: 1.5rem 1rem; 
     text-align: center;
-    padding: 20px;
-    letter-spacing: 2px;
-
+    color: var(--blanco);
 }
 
-footer :first-child{
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: white;
+.footer .grupo-2 small{
+    font-size: 1.5rem;
 }
 
-footer :nth-child(2){
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    color: white;
-}
-
-footer :nth-child(3){
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    color: white;
-}
-
-footer :nth-child(4){
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: light;
-    font-size: 16px;
-    color: white;
+@media screen and (min-width: 768px) {
+    .footer .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem;
+        padding: 1.5rem 0rem;
+    }
 }
